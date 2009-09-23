@@ -1,4 +1,5 @@
 TODO:
+
 *   Add forgery lib, until then the db:anonymize task will not work. (http://github.com/sevenwire/forgery)
 *   Add extension to ext.spreecommerce.com and mention on mailing list when complete. 
 
@@ -12,11 +13,10 @@ A combination of the below rake tasks that uses an already-imported copy of a
 production database and makes it ready for use in a non-production environment.
 
 Specifically this task does the following:
+
 *   Anonymizes the database (preserves admin emails)
 *   Disallows SSL so the app can be used without SSL
-*   Prompts you to enter an existing admin email address and a new password for
-    that user.  This is provided as the password would have been reset by the
-    anonymization process.
+*   Prompts you to enter an existing admin email address and a new password for that user.  This is provided as the password would have been reset by the anonymization process.
 
 I use 'rake deprod' when I want a production-like database in a testing environment.
 Remember you'll have to export and import your production database yourself before
