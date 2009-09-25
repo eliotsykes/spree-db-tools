@@ -3,6 +3,10 @@ class DbToolsExtension < Spree::Extension
   description "An extension to add a few useful database related rake tasks."
   url "http://github.com/eliotsykes/spree-db-tools"
   
+  def self.require_gems(config)
+    config.gem "sevenwire-forgery", :lib => "forgery", :source => "http://gems.github.com"
+  end
+  
   def activate
     
     Spree::Setup.class_eval do

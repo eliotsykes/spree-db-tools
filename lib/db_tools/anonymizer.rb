@@ -95,7 +95,7 @@ module DbTools
     end
     
     def self.anonymize_shipments
-      Shipments.all.each do |shipment|
+      Shipment.all.each do |shipment|
         if !shipment.tracking.blank?
           shipment.tracking = BasicForgery.text
           shipment.save!
@@ -120,7 +120,7 @@ module DbTools
         end
         user.current_login_ip = ip_address if !user.current_login_ip.blank?
         user.last_login_ip = ip_address if !user.last_login_ip.blank?
-        # Not certain if changing these tokens is a good idea.
+        # Not certain if changing these tokens is a good idea or needed.
         user.remember_token = BasicForgery.text if !user.remember_token.blank?
         user.persistence_token = BasicForgery.text if !user.persistence_token.blank?
         user.single_access_token = BasicForgery.text if !user.single_access_token.blank?

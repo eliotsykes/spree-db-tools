@@ -1,8 +1,3 @@
-TODO:
-
-*   Add forgery lib, until then the db:anonymize task will not work. (http://github.com/sevenwire/forgery)
-*   Add extension to ext.spreecommerce.com and mention on mailing list when complete. 
-
 # Db Tools #
 An extension to add a few useful Spree-related database rake tasks.
 
@@ -50,6 +45,10 @@ Disallow SSL (sets preferences :allow_ssl_in_production and
 
 ### rake db:user:password ###
 Change the password for an existing user (prompts for e-mail and new password)
+
+## Installation ##
+You'll be prompted to install the sevenwire-forgery gem. You can do this by
+calling: rake gems:install
 
 Contributions and feedback welcome,
 
