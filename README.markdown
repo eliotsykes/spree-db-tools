@@ -46,6 +46,10 @@ Disallow SSL (sets preferences :allow_ssl_in_production and
 ### rake db:user:password ###
 Change the password for an existing user (prompts for e-mail and new password)
 
+### rake db:sample and rake db:bootstrap ###
+Overrides the existing sample data loading for spree so sample data specified in
+extensions is loaded after loading the spree-core sample data.
+
 ## Installation ##
 You'll be prompted to install the sevenwire-forgery gem. You can do this by
 calling: rake gems:install
